@@ -1,0 +1,178 @@
+<html><head><meta charset='UTF-8'><title>BPI Report</title></head><body><div style='font-family: Arial; padding: 20px;'>
+<h1>📌 Tổng quan dữ liệu gốc</h1>
+<p></p>
+<li>Số dòng: 1000</li>
+<li>Số cột: 22</li>
+<li>Các cột:</li>
+<li>eventID</li>
+<li>case Spend area text</li>
+<li>case Company</li>
+<li>case Document Type</li>
+<li>case Sub spend area text</li>
+<li>case Purchasing Document</li>
+<li>case Purch. Doc. Category name</li>
+<li>case Vendor</li>
+<li>case Item Type</li>
+<li>case Item Category</li>
+<li>case Spend classification text</li>
+<li>case Source</li>
+<li>case Name</li>
+<li>case GR-Based Inv. Verif.</li>
+<li>case Item</li>
+<li>case concept:name</li>
+<li>case Goods Receipt</li>
+<li>event User</li>
+<li>event org:resource</li>
+<li>event concept:name</li>
+<li>event Cumulative net worth (EUR)</li>
+<li>event time:timestamp</li>
+<p></p>
+<h1>🧹 Chi tiết các bước làm sạch</h1>
+<p></p>
+<li>Phát hiện 10 dòng thiếu dữ liệu ở 3 cột: `case Spend area text`, `case Sub spend area text`, `case Spend classification text`.</li>
+<li>Điền missing values bằng giá trị mode (phổ biến nhất).</li>
+<li>Không phát hiện dòng trùng lặp.</li>
+<li>Chuẩn hóa kiểu dữ liệu:</li>
+<li>`event time:timestamp` → datetime.</li>
+<li>`event Cumulative net worth (EUR)` → float.</li>
+<p></p>
+<h1>📊 Biểu đồ phân phối và nhận xét</h1>
+<p></p>
+<h2>eventID</h2>
+<p>**Loại biểu đồ**: Histogram</p>
+<img src='plots/eventID .png' alt='eventID ' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Biểu đồ histogram cho thấy phân phối giá trị của `eventID `, giúp nhận diện outlier hoặc xu hướng tập trung.</blockquote>
+<p></p>
+<p></p>
+<h2>case Spend area text</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Spend area text.png' alt='case Spend area text' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Spend area text`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Company</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Company.png' alt='case Company' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Company`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Document Type</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Document Type.png' alt='case Document Type' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Document Type`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Sub spend area text</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Sub spend area text.png' alt='case Sub spend area text' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Sub spend area text`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Purchasing Document</h2>
+<p>**Loại biểu đồ**: Histogram</p>
+<img src='plots/case Purchasing Document.png' alt='case Purchasing Document' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Biểu đồ histogram cho thấy phân phối giá trị của `case Purchasing Document`, giúp nhận diện outlier hoặc xu hướng tập trung.</blockquote>
+<p></p>
+<p></p>
+<h2>case Purch. Doc. Category name</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Purch. Doc. Category name.png' alt='case Purch. Doc. Category name' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Purch. Doc. Category name`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Vendor</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Vendor.png' alt='case Vendor' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Vendor`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Item Type</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Item Type.png' alt='case Item Type' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Item Type`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Item Category</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Item Category.png' alt='case Item Category' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Item Category`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Spend classification text</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Spend classification text.png' alt='case Spend classification text' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Spend classification text`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Source</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Source.png' alt='case Source' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Source`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Name</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case Name.png' alt='case Name' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Name`.</blockquote>
+<p></p>
+<p></p>
+<h2>case GR-Based Inv. Verif.</h2>
+<p>**Loại biểu đồ**: Bar Chart (Bool)</p>
+<img src='plots/case GR-Based Inv. Verif..png' alt='case GR-Based Inv. Verif.' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case GR-Based Inv. Verif.`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Item</h2>
+<p>**Loại biểu đồ**: Histogram</p>
+<img src='plots/case Item.png' alt='case Item' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Biểu đồ histogram cho thấy phân phối giá trị của `case Item`, giúp nhận diện outlier hoặc xu hướng tập trung.</blockquote>
+<p></p>
+<p></p>
+<h2>case concept:name</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/case concept:name.png' alt='case concept:name' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case concept:name`.</blockquote>
+<p></p>
+<p></p>
+<h2>case Goods Receipt</h2>
+<p>**Loại biểu đồ**: Bar Chart (Bool)</p>
+<img src='plots/case Goods Receipt.png' alt='case Goods Receipt' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `case Goods Receipt`.</blockquote>
+<p></p>
+<p></p>
+<h2>event User</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/event User.png' alt='event User' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `event User`.</blockquote>
+<p></p>
+<p></p>
+<h2>event org:resource</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/event org:resource.png' alt='event org:resource' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `event org:resource`.</blockquote>
+<p></p>
+<p></p>
+<h2>event concept:name</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/event concept:name.png' alt='event concept:name' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `event concept:name`.</blockquote>
+<p></p>
+<p></p>
+<h2>event Cumulative net worth (EUR)</h2>
+<p>**Loại biểu đồ**: Histogram</p>
+<img src='plots/event Cumulative net worth (EUR).png' alt='event Cumulative net worth (EUR)' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Biểu đồ histogram cho thấy phân phối giá trị của `event Cumulative net worth (EUR)`, giúp nhận diện outlier hoặc xu hướng tập trung.</blockquote>
+<p></p>
+<p></p>
+<h2>event time:timestamp</h2>
+<p>**Loại biểu đồ**: Bar Chart (Categorical)</p>
+<img src='plots/event time:timestamp.png' alt='event time:timestamp' style='max-width:100%;'><br>
+<blockquote>Nhận xét: Bar chart cho thấy sự phân bố của các giá trị phân loại trong `event time:timestamp`.</blockquote>
+<p></p>
+<p></p>
+<p></p>
+<h1>💡 Các insight nổi bật</h1>
+<p></p>
+<li>Một số cột có giá trị chiếm ưu thế rõ rệt (vd: `case Company`, `case Vendor`).</li>
+<li>Các cột numerical như `event Cumulative net worth (EUR)` có nhiều giá trị nhỏ, một số trường hợp outlier đáng chú ý.</li>
+</div></body></html>
