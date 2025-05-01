@@ -8,7 +8,7 @@ from langchain.chat_models import ChatOpenAI
 import os
 
 # Lấy API key
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "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")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "YOUR_OPENAI_API_KEY")
 
 st.set_page_config(layout="wide")
 st.title("🧠 GPT Data Agent (LangChain + Streamlit)")
